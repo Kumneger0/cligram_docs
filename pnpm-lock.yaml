@@ -20,6 +20,9 @@ importers:
       '@farming-labs/docs':
         specifier: 0.0.12
         version: 0.0.12
+      '@vercel/analytics':
+        specifier: ^1.6.1
+        version: 1.6.1
       astro:
         specifier: ^5.7.0
         version: 5.18.0(@vercel/functions@2.2.13)(rollup@4.59.0)(typescript@5.9.3)
