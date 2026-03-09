@@ -5,6 +5,7 @@ import SearchDialog from "@farming-labs/astro-theme/src/components/SearchDialog.
 import AskAITrigger from "../../components/AskAITrigger.astro";
 import config from "../../lib/docs.config";
 import { load } from "../../lib/docs.server";
+import Analytics from "@vercel/analytics/astro";
 import "@farming-labs/astro-theme/colorful/css";
 
 const data = await load(Astro.url.pathname);
@@ -16,6 +17,7 @@ const data = await load(Astro.url.pathname);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{data.title} – Docs</title>
     {data.description && <meta name="description" content={data.description} />}
+    <Analytics />
   </head>
   <body>
     <DocsLayoutComponent tree={data.tree} flatPages={data.flatPages} config={config}>
