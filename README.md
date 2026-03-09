@@ -1,6 +1,6 @@
 # cligram Documentation Site
 
-This is the source code for the cligram documentation site, built with [Astro](https://astro.build/) and [@farming-labs/docs](https://docs.farming-labs.dev/).
+This is the source code for the [cligram](https://github.com/Kumneger0/cligram) documentation site, built with [Astro](https://astro.build/) and [@farming-labs/docs](https://docs.farming-labs.dev/).
 
 ## Getting Started
 
