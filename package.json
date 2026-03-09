@@ -1,0 +1,18 @@
+{
+  "name": "@farming-labs/docs/example-astro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^9.0.4",
+    "@farming-labs/astro": "0.0.12",
+    "@farming-labs/astro-theme": "0.0.12",
+    "@farming-labs/docs": "0.0.12",
+    "astro": "^5.7.0"
+  }
+}
