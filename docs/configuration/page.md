@@ -20,10 +20,6 @@ Customize your cligram experience by editing the config file at `~/.cligram/user
   "readStories": false,
   "privacy": {
     "lastSeenVisibility": "everyone"
-  },
-  "notifications": {
-    "enabled": true,
-    "showMessagePreview": true
   }
 }
 ```
@@ -41,7 +37,6 @@ Customize your cligram experience by editing the config file at `~/.cligram/user
   - `"contacts"`: Only contacts can see your last seen.
   - `"nobody"`: No one can see your last seen.
   - If not set: Uses your Telegram privacy settings.
-- **notifications.enabled**: Master switch for notifications (`true` = default, `false` = disable all).
-- **notifications.showMessagePreview**: Show message content in notifications (`true` = default, `false` = only sender name).
+
 
 All settings are optional. Changes take effect the next time you start cligram.
