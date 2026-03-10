@@ -4,26 +4,25 @@ import { defineDocs } from "@farming-labs/docs";
 export default defineDocs({
   entry: "docs",
   contentDir: "docs",
-  // Set to true for full static build (e.g. Cloudflare Pages): search and AI are hidden
   staticExport: true,
   theme: colorful({
     ui: {
       components: { Callout: { variant: "outline" } },
       layout: {
         toc: { enabled: true, depth: 3, style: "default" },
-        sidebarWidth: 300,
+        sidebarWidth: 280,
       },
       sidebar: { style: "default" },
       typography: {
         font: {
           style: {
-            sans: "system-ui, -apple-system, sans-serif",
-            mono: "ui-monospace, monospace",
+            sans: "'Inter', system-ui, -apple-system, sans-serif",
+            mono: "'JetBrains Mono', ui-monospace, monospace",
           },
-          h1: { size: "2.25rem", weight: 700, letterSpacing: "-0.025em" },
-          h2: { size: "1.5rem", weight: 600, letterSpacing: "-0.015em" },
-          h3: { size: "1.25rem", weight: 600 },
-          body: { size: "0.975rem", lineHeight: "1.8" },
+          h1: { size: "3rem", weight: 900, letterSpacing: "-0.04em" },
+          h2: { size: "1.875rem", weight: 800, letterSpacing: "-0.03em" },
+          h3: { size: "1.5rem", weight: 700, letterSpacing: "-0.02em" },
+          body: { size: "1rem", lineHeight: "1.75", weight: 400 },
         },
       },
     },

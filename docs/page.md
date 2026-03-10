@@ -7,10 +7,6 @@ icon: book
 
 # Introduction
 
-> [!WARNING]
->
-> **Use at your own risk.** This application breaks Telegram's <a href="https://core.telegram.org/api/terms" target="_blank">developer TOS</a> to implement "**ghost mode**" features (anonymous story viewing and message reading). Users are solely responsible for compliance.
-
 **cligram** is a Telegram client that runs in your terminal.
 
 ![cligram demo](/demo.gif)
@@ -29,3 +25,7 @@ icon: book
 - **Multi-Account Support:** Only one account at a time.
 
 For a complete Telegram experience, use the official desktop or mobile apps.
+
+<div style="opacity: 0.7; font-size: 0.7em; margin-top: 50px;">
+  <strong>Use at your own risk.</strong> This application breaks Telegram's <a href="https://core.telegram.org/api/terms" target="_blank">developer TOS</a> to implement "ghost mode" features (anonymous story viewing and message reading). Users are solely responsible for compliance.
+</div>

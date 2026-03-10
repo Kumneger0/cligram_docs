@@ -1,5 +1,5 @@
 {
-  "name": "@farming-labs/docs/example-astro",
+  "name": "cligram_docs",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,7 +13,9 @@
     "@farming-labs/astro": "0.0.12",
     "@farming-labs/astro-theme": "0.0.12",
     "@farming-labs/docs": "0.0.12",
+    "astro": "^5.7.0",
+    "@tailwindcss/vite": "^4.2.1",
     "@vercel/analytics": "^1.6.1",
-    "astro": "^5.7.0"
+    "tailwindcss": "^4.2.1"
   }
 }
