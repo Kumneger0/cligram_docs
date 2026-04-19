@@ -21,7 +21,7 @@ icon: book
 - **Media Management:** No advanced media viewing/editing.
 - **Voice/Video Calls:** Not supported.
 - **Rich Media Previews:** Not displayed.
-- **Group Support:** Supported, but you can only write in group chats. You cannot see the full member list.
+- **Group Support:** Supported, including full Telegram Forums support (viewing and participating in topics). You cannot see the full member list.
 - **Multi-Account Support:** Only one account at a time.
 
 For a complete Telegram experience, use the official desktop or mobile apps.

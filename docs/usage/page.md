@@ -31,6 +31,7 @@ icon: terminal
 - **Latest Message**: Shift + ↓ gets the latest message (only in MainView).
 - **Filter (sidebar)**: c = Channels, g = Groups, u = Users.
 - **Search**: `ctrl + k` opens search. Type to search; results appear below. Tab switches between input and results. Enter opens selection; Esc closes.
+- **Forums**: Navigate to a group, hit Enter. If it has topics, they will list in the main view. Select one with Enter to open; exit a topic with Backspace.
 
 ### Working in Chats
 
