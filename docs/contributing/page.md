@@ -1,5 +1,5 @@
 ---
-order: 7
+order: 8
 title: Contributing
 description: How to contribute to cligram.
 icon: rocket

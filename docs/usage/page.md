@@ -10,6 +10,7 @@ icon: terminal
 ### Quick Start
 
 - **Login:** Run `cligram` and follow the prompts if you are not logged in.
+- **Account Management:** Run `cligram account` to switch accounts or `cligram account --add` to add a new one.
 - **Logout:** Run `cligram logout`.
 - **Upgrade:** On Debian/Ubuntu/Alpine, run `cligram upgrade`.
 
