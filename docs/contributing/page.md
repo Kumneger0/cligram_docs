@@ -7,9 +7,13 @@ icon: rocket
 
 # Contributing
 
-We welcome contributions to cligram! To get started:
+We welcome contributions to cligram!
 
-- Read the [CONTRIBUTING.md](https://github.com/Kumneger0/cligram/blob/main/CONTRIBUTING.md) file for detailed guidelines.
-- If you encounter issues or have suggestions, [open an issue on GitHub](https://github.com/Kumneger0/cligram/issues).
+### How You Can Help
 
-Thank you for your interest in improving cligram!
+- **⭐ Star the repository:** [Starring the repo on GitHub](https://github.com/Kumneger0/cligram) is a great way to support the project.
+- **Report Issues:** If you encounter bugs or have suggestions, [open an issue on GitHub](https://github.com/Kumneger0/cligram/issues).
+- **Submit Code:** Read the [CONTRIBUTING.md](https://github.com/Kumneger0/cligram/blob/main/CONTRIBUTING.md) file for detailed guidelines on opening Pull Requests.
+
+Thank you for supporting cligram!
+
