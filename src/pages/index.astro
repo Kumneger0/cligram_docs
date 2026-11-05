@@ -8,38 +8,48 @@ const description =
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth" style="background-color: #080a08; color-scheme: dark;">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#080a08" />
     <Analytics />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <style>
-      body { font-family: 'Inter', sans-serif; }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style is:inline>
+      html, body {
+        background-color: #080a08 !important;
+        color: #f0f2ed !important;
+        color-scheme: dark !important;
+        font-family: 'Onest', 'Inter', system-ui, sans-serif;
+      }
+      code, pre, .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      }
     </style>
   </head>
 
-  <body class="bg-neutral-950 text-neutral-100 antialiased">
-    <nav class="border-b border-neutral-800/50">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <body class="bg-terminal-bg text-terminal-text antialiased min-h-screen selection:bg-terminal-accent/20 selection:text-terminal-text">
+    <nav class="border-b border-terminal-border/80 bg-terminal-bg/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex items-center justify-between h-16">
-          <a href="/" class="flex items-center gap-2.5 text-lg font-semibold">
-           
-            <span>cligram</span>
+          <a href="/" class="flex items-center gap-2.5 font-bold text-terminal-text tracking-tight group">
+            <span class="font-mono text-terminal-accent text-sm">$</span>
+            <span class="text-base group-hover:text-terminal-accent transition-colors">cligram</span>
           </a>
           
-          <div class="flex items-center gap-6">
-            <a href="/docs" class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors">
+          <div class="flex items-center gap-4 sm:gap-6">
+            <a href="/docs" class="text-sm text-terminal-muted hover:text-terminal-text transition-colors">
               Docs
             </a>
             <a 
               href="https://github.com/Kumneger0/cligram" 
               target="_blank"
               rel="noopener noreferrer"
-              class="px-3 py-1.5 text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-md hover:bg-amber-500/20 transition-all flex items-center gap-1.5"
+              class="px-3 py-1.5 text-xs font-mono font-medium bg-terminal-accent/10 text-terminal-accent border border-terminal-accent/20 rounded-lg hover:bg-terminal-accent/20 transition-all flex items-center gap-1.5"
             >
               <span>⭐</span> Star on GitHub
             </a>
@@ -48,30 +58,34 @@ const description =
       </div>
     </nav>
 
-    <section class="px-6 lg:px-8 py-20">
-      <div class="max-w-7xl mx-auto">
+    <section class="py-16 md:py-24 px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto">
         <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <p class="font-mono text-xs text-terminal-muted mb-4 tracking-wider uppercase">// terminal telegram client</p>
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-terminal-text mb-6">
             Telegram client for your terminal
           </h1>
           
-          <p class="text-lg text-neutral-400 mb-8 leading-relaxed">
+          <p class="text-base sm:text-lg text-terminal-muted mb-8 leading-relaxed max-w-2xl">
             Browse Telegram with Ghost Mode. Read messages, view stories, and check status—all without 
             read receipts, online indicators, or typing notifications. Stay completely invisible.
           </p>
           
-          <div class="flex flex-wrap items-center gap-3">
+          <div class="flex flex-wrap items-center gap-4">
             <a 
               href="/docs" 
-              class="px-5 py-2.5 bg-neutral-100 text-neutral-950 font-medium rounded-md hover:bg-neutral-200 transition-colors"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-terminal-accent/10 text-terminal-accent border border-terminal-accent/30 font-medium text-sm hover:bg-terminal-accent/20 transition-colors duration-200"
             >
               Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
             <a 
               href="https://github.com/Kumneger0/cligram" 
               target="_blank"
               rel="noopener noreferrer"
-              class="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-yellow-500 text-neutral-950 font-semibold rounded-md hover:from-amber-400 hover:to-yellow-400 transition-all flex items-center gap-2 shadow-lg shadow-amber-500/20"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-terminal-muted border border-terminal-border font-medium text-sm hover:text-terminal-text hover:border-terminal-muted transition-colors duration-200"
             >
               <span>⭐</span> Star on GitHub
             </a>
@@ -80,74 +94,80 @@ const description =
       </div>
     </section>
 
-    <section class="py-16 px-6 lg:px-8">
+    <section class="pb-16 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden shadow-2xl">
-          <div class="flex items-center gap-2 px-4 py-3 bg-neutral-900/50 border-b border-neutral-800">
-            <div class="flex gap-1.5">
-              <div class="w-3 h-3 rounded-full bg-neutral-700"></div>
-              <div class="w-3 h-3 rounded-full bg-neutral-700"></div>
-              <div class="w-3 h-3 rounded-full bg-neutral-700"></div>
+        <div class="rounded-xl border border-terminal-border bg-terminal-surface overflow-hidden shadow-2xl">
+          <div class="flex items-center justify-between px-4 py-3 bg-terminal-surface border-b border-terminal-border">
+            <div class="flex items-center gap-2">
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-terminal-border"></div>
+                <div class="w-3 h-3 rounded-full bg-terminal-border"></div>
+                <div class="w-3 h-3 rounded-full bg-terminal-border"></div>
+              </div>
+              <span class="text-xs text-terminal-muted ml-2 font-mono">cligram — ghost mode</span>
             </div>
-            <span class="text-xs text-neutral-500 ml-2 font-mono">cligram</span>
+            <div class="flex items-center gap-2 font-mono text-[11px] text-terminal-accent">
+              <span class="w-2 h-2 rounded-full bg-terminal-accent animate-pulse"></span>
+              <span>active</span>
+            </div>
           </div>
-          <div class="p-1">
-            <img src="/demo.gif" alt="Cligram terminal demo" class="w-full rounded-b" />
+          <div class="p-1 bg-terminal-bg">
+            <img src="/demo.gif" alt="Cligram terminal demo" class="w-full rounded-b border border-terminal-border/30" />
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-24 px-6 lg:px-8">
+    <section class="py-16 md:py-20 px-4 sm:px-6">
       <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-3">
-            Built for the terminal
-          </h2>
-          <p class="text-neutral-400">
-            Fast, private, and keyboard-driven
-          </p>
+        <div class="flex items-center gap-3 mb-12">
+          <span class="font-mono text-xs text-terminal-accent tracking-wider">01</span>
+          <h2 class="text-2xl font-bold text-terminal-text">Built for the terminal</h2>
+          <div class="flex-1 h-px bg-terminal-border"></div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-6 rounded-lg bg-neutral-900/50 border border-neutral-800/50">
-            <div class="text-3xl mb-4">👻</div>
-            <h3 class="text-lg font-semibold mb-2">Ghost Mode</h3>
-            <p class="text-sm text-neutral-400 leading-relaxed">
-              Read messages and view stories without sending read receipts or notifications.
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="group rounded-xl border border-terminal-border bg-terminal-surface/50 p-6 hover:border-terminal-accent/30 transition-colors duration-300">
+            <span class="font-mono text-[10px] text-terminal-accent tracking-[0.2em] uppercase block mb-2">// PRIVACY</span>
+            <div class="text-2xl mb-3">👻</div>
+            <h3 class="text-lg font-bold text-terminal-text mb-2">Ghost Mode</h3>
+            <p class="text-sm text-terminal-muted leading-relaxed">
+              Read messages and view stories anonymously without sending read receipts or online indicators.
             </p>
           </div>
 
-          <div class="p-6 rounded-lg bg-neutral-900/50 border border-neutral-800/50">
-            <div class="text-3xl mb-4">⚡</div>
-            <h3 class="text-lg font-semibold mb-2">Lightweight</h3>
-            <p class="text-sm text-neutral-400 leading-relaxed">
-              Minimal resource usage with instant response times. No bloat, just functionality.
+          <div class="group rounded-xl border border-terminal-border bg-terminal-surface/50 p-6 hover:border-terminal-accent/30 transition-colors duration-300">
+            <span class="font-mono text-[10px] text-terminal-accent tracking-[0.2em] uppercase block mb-2">// PERFORMANCE</span>
+            <div class="text-2xl mb-3">⚡</div>
+            <h3 class="text-lg font-bold text-terminal-text mb-2">Lightweight</h3>
+            <p class="text-sm text-terminal-muted leading-relaxed">
+              Minimal resource footprint.
             </p>
           </div>
 
-          <div class="p-6 rounded-lg bg-neutral-900/50 border border-neutral-800/50">
-            <div class="text-3xl mb-4">⌨️</div>
-            <h3 class="text-lg font-semibold mb-2">Keyboard First</h3>
-            <p class="text-sm text-neutral-400 leading-relaxed">
-              Navigate everything with keyboard shortcuts. Stay in your flow without reaching for the mouse.
+          <div class="group rounded-xl border border-terminal-border bg-terminal-surface/50 p-6 hover:border-terminal-accent/30 transition-colors duration-300">
+            <span class="font-mono text-[10px] text-terminal-accent tracking-[0.2em] uppercase block mb-2">// WORKFLOW</span>
+            <div class="text-2xl mb-3">⌨️</div>
+            <h3 class="text-lg font-bold text-terminal-text mb-2">Keyboard First</h3>
+            <p class="text-sm text-terminal-muted leading-relaxed">
+              Navigate chats, channels, folders, and message history seamlessly with keyboard shortcuts.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="border-t border-neutral-800/50 py-8 px-6 lg:px-8 mt-16">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-neutral-500">
+    <footer class="border-t border-terminal-border py-8 px-4 sm:px-6 mt-16 text-terminal-muted text-sm">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-mono text-xs">
           © {new Date().getFullYear()} cligram
         </p>
         
-        <div class="flex items-center gap-6 text-sm text-neutral-500">
-          <a href="https://github.com/Kumneger0/cligram" class="hover:text-neutral-300 transition-colors">
+        <div class="flex items-center gap-6">
+          <a href="https://github.com/Kumneger0/cligram" target="_blank" rel="noopener noreferrer" class="hover:text-terminal-accent transition-colors">
             GitHub
           </a>
-          <a href="/docs" class="hover:text-neutral-300 transition-colors">
+          <a href="/docs" class="hover:text-terminal-accent transition-colors">
             Docs
           </a>
         </div>

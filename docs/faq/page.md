@@ -8,16 +8,10 @@ icon: book
 # FAQ
 
 #### What platforms are supported?
-cligram provides pre-built binaries for Linux and macOS. Windows is not officially supported, but you can try running cligram using [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/).
+Cligram provides pre-built binaries for Linux (`amd64` archives, `.deb`, `.rpm`, `.apk`) and macOS (Apple Silicon `arm64`). Intel macOS (`amd64`) can build from source. Windows is supported via [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/).
 
 #### Can I use multiple Telegram accounts?
-No, only a single Telegram account is supported at a time.
-
-#### Does cligram support bots, groups, or media management?
-Bot interaction is now supported (beta). Group chat is supported for writing messages, but you cannot view the full member list. Advanced media features are not yet implemented, but are planned for future releases.
+Yes! Cligram fully supports multiple accounts. You can hot-swap between accounts live inside the app using the **Account Switcher Modal** (`ctrl + a` when the input is not focused) or manage accounts from your shell with `cligram account` and `cligram account --add`.
 
 #### Where is my session data stored?
-Session data is stored in `~/.cligram/` on your system. If using Docker, a volume is used to persist this data.
-
-#### How do I update cligram?
-Download the latest release from the [releases page](https://github.com/Kumneger0/cligram/releases) or rebuild from source. If you are on Debian, Ubuntu, or Alpine Linux, you can upgrade to the latest version using `cligram upgrade`.
+All session data and account configurations are stored locally on your machine under `~/.cligram/` (with individual accounts under `~/.cligram/accountN/`).

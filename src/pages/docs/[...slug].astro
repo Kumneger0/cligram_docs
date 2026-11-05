@@ -6,7 +6,8 @@ import AskAITrigger from "../../components/AskAITrigger.astro";
 import config from "../../lib/docs.config";
 import { load } from "../../lib/docs.server";
 import Analytics from "@vercel/analytics/astro";
-import "@farming-labs/astro-theme/colorful/css";
+import "@farming-labs/astro-theme/greentree/css";
+import "../../global.css";
 
 const data = await load(Astro.url.pathname);
 ---
@@ -18,6 +19,9 @@ const data = await load(Astro.url.pathname);
     <title>{data.title} – Docs</title>
     {data.description && <meta name="description" content={data.description} />}
     <Analytics />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <DocsLayoutComponent tree={data.tree} flatPages={data.flatPages} config={config}>

@@ -28,16 +28,15 @@
     margin: 12px 14px 8px 14px;
     padding: 10px 12px;
     border-radius: 8px;
-    background: linear-gradient(135deg, rgba(234, 179, 8, 0.12) 0%, rgba(245, 158, 11, 0.06) 100%);
-    border: 1px solid rgba(234, 179, 8, 0.25);
+    background: rgba(182, 240, 156, 0.08);
+    border: 1px solid rgba(182, 240, 156, 0.2);
     backdrop-filter: blur(8px);
     transition: all 0.2s ease;
   }
 
   .cligram-github-star-banner:hover {
-    border-color: rgba(234, 179, 8, 0.45);
-    background: linear-gradient(135deg, rgba(234, 179, 8, 0.18) 0%, rgba(245, 158, 11, 0.1) 100%);
-    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15);
+    border-color: rgba(182, 240, 156, 0.35);
+    background: rgba(182, 240, 156, 0.12);
   }
 
   .star-banner-content {
@@ -53,12 +52,13 @@
     gap: 6px;
     font-size: 0.8125rem;
     font-weight: 500;
-    color: #fef08a;
+    color: #f0f2ed;
     line-height: 1;
+    font-family: 'Onest', sans-serif;
   }
 
   .star-icon {
-    color: #eab308;
+    color: #b6f09c;
     flex-shrink: 0;
   }
 
@@ -69,19 +69,19 @@
     padding: 5px 10px;
     font-size: 0.75rem;
     font-weight: 600;
-    color: #ffffff;
-    background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+    font-family: 'JetBrains Mono', monospace;
+    color: #080a08;
+    background: #b6f09c;
     border-radius: 6px;
     text-decoration: none !important;
     white-space: nowrap;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    transition: transform 0.15s ease, background 0.15s ease;
   }
 
   .star-banner-button:hover {
     transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(234, 179, 8, 0.4);
-    filter: brightness(1.1);
-    color: #ffffff;
+    background: #c6f78a;
+    color: #080a08;
   }
 </style>

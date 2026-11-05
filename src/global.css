@@ -1,38 +1,162 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #0088cc;
-  --color-brand-light: #33a1d6;
-  --color-bg-deep: #05070a;
-  --color-bg-elevated: #0d1117;
-  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --font-sans: 'Onest', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+
+  --color-terminal-bg: #080a08;
+  --color-terminal-surface: #101510;
+  --color-terminal-text: #f0f2ed;
+  --color-terminal-muted: #aab3a7;
+  --color-terminal-accent: #b6f09c;
+  --color-terminal-border: #1e2a1e;
+
+  --color-primary-50: #f0fde4;
+  --color-primary-100: #dcfbb4;
+  --color-primary-200: #c6f78a;
+  --color-primary-300: #b6f09c;
+  --color-primary-400: #a3e87a;
+  --color-primary-500: #8ad45e;
+  --color-primary-600: #6db348;
+  --color-primary-700: #518f34;
+  --color-primary-800: #376b22;
+  --color-primary-900: #1e4712;
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    background-color: var(--color-bg-deep);
-    color: #e5e7eb;
-    font-family: 'Inter', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+:root {
+  --bg: #080a08;
+  --surface: #101510;
+  --text: #f0f2ed;
+  --text-secondary: #aab3a7;
+  --accent: #b6f09c;
+  --border: #1e2a1e;
+  color-scheme: dark;
+
+  /* Theme overrides for @farming-labs/docs components */
+  --color-fd-primary: #b6f09c;
+  --color-fd-primary-foreground: #080a08;
+  --color-fd-ring: #b6f09c;
+
+  --color-fd-background: #080a08;
+  --color-fd-foreground: #f0f2ed;
+  --color-fd-card: #101510;
+  --color-fd-card-foreground: #f0f2ed;
+  --color-fd-popover: #101510;
+  --color-fd-popover-foreground: #f0f2ed;
+  --color-fd-secondary: #101510;
+  --color-fd-secondary-foreground: #f0f2ed;
+  --color-fd-muted: #101510;
+  --color-fd-muted-foreground: #aab3a7;
+  --color-fd-accent: #151c15;
+  --color-fd-accent-foreground: #b6f09c;
+  --color-fd-border: #1e2a1e;
+
+  /* Sidebar overrides */
+  --fd-sidebar-bg: #080a08;
+  --fd-sidebar-card-bg: #101510;
+  --fd-sidebar-active-bg: rgba(182, 240, 156, 0.1);
+  --fd-sidebar-active-text: #b6f09c;
+  --fd-sidebar-active-line: #b6f09c;
+  --fd-sidebar-indent-line: #1e2a1e;
+
+  --fd-font-sans: 'Onest', 'Inter', system-ui, -apple-system, sans-serif;
+  --fd-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-@layer utilities {
-  .glass {
-    background: rgba(13, 17, 23, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
+.dark {
+  --color-fd-primary: #b6f09c;
+  --color-fd-primary-foreground: #080a08;
+  --color-fd-ring: #b6f09c;
 
-  .glow-blue {
-    box-shadow: 0 0 40px -10px rgba(0, 136, 204, 0.3);
-  }
+  --color-fd-background: #080a08;
+  --color-fd-foreground: #f0f2ed;
+  --color-fd-card: #101510;
+  --color-fd-card-foreground: #f0f2ed;
+  --color-fd-popover: #101510;
+  --color-fd-popover-foreground: #f0f2ed;
+  --color-fd-secondary: #101510;
+  --color-fd-secondary-foreground: #f0f2ed;
+  --color-fd-muted: #101510;
+  --color-fd-muted-foreground: #aab3a7;
+  --color-fd-accent: #151c15;
+  --color-fd-accent-foreground: #b6f09c;
+  --color-fd-border: #1e2a1e;
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-white via-white to-brand;
-  }
+  --fd-sidebar-bg: #080a08;
+  --fd-sidebar-card-bg: #101510;
+  --fd-sidebar-active-bg: rgba(182, 240, 156, 0.1);
+  --fd-sidebar-active-text: #b6f09c;
+  --fd-sidebar-active-line: #b6f09c;
+  --fd-sidebar-indent-line: #1e2a1e;
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text);
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: rgba(182, 240, 156, 0.2);
+  color: var(--text);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Docs content typography enhancements */
+.fd-docs-content :not(pre) > code {
+  color: var(--accent) !important;
+  border-color: var(--border) !important;
+  background: var(--surface) !important;
+  font-family: var(--font-mono);
+}
+
+.fd-docs-content a:not(.fd-page-nav-card):not([class]) {
+  color: var(--accent) !important;
+  text-decoration-color: rgba(182, 240, 156, 0.4) !important;
+}
+
+.fd-docs-content a:not(.fd-page-nav-card):not([class]):hover {
+  text-decoration-color: var(--accent) !important;
+  color: #c6f78a !important;
+}
+
+.fd-docs-content blockquote {
+  border-left-color: var(--accent) !important;
+}
+
+.fd-card:hover {
+  border-color: var(--accent) !important;
+}
+
+.fd-card-icon {
+  color: var(--accent) !important;
+  background: rgba(182, 240, 156, 0.08) !important;
+  border-color: var(--border) !important;
 }

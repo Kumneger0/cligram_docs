@@ -1,4 +1,4 @@
-import { colorful } from "@farming-labs/astro-theme/colorful";
+import { greentree } from "@farming-labs/astro-theme/greentree";
 import { defineDocs } from "@farming-labs/docs";
 
 
@@ -6,8 +6,14 @@ export default defineDocs({
   entry: "docs",
   contentDir: "docs",
   staticExport: true,
-  theme: colorful({
+  theme: greentree({
     ui: {
+      colors: {
+        primary: "#b6f09c",
+        background: "#080a08",
+        muted: "#aab3a7",
+        border: "#1e2a1e",
+      },
       components: { Callout: { variant: "outline" } },
       layout: {
         toc: { enabled: true, depth: 3, style: "default" },
@@ -17,12 +23,12 @@ export default defineDocs({
       typography: {
         font: {
           style: {
-            sans: "'Inter', system-ui, -apple-system, sans-serif",
-            mono: "'JetBrains Mono', ui-monospace, monospace",
+            sans: "'Onest', 'Inter', system-ui, -apple-system, sans-serif",
+            mono: "'JetBrains Mono', 'Fira Code', ui-monospace, monospace",
           },
-          h1: { size: "3rem", weight: 900, letterSpacing: "-0.04em" },
-          h2: { size: "1.875rem", weight: 800, letterSpacing: "-0.03em" },
-          h3: { size: "1.5rem", weight: 700, letterSpacing: "-0.02em" },
+          h1: { size: "2.75rem", weight: 700, letterSpacing: "-0.03em" },
+          h2: { size: "1.75rem", weight: 700, letterSpacing: "-0.02em" },
+          h3: { size: "1.375rem", weight: 600, letterSpacing: "-0.01em" },
           body: { size: "1rem", lineHeight: "1.75", weight: 400 },
         },
       },

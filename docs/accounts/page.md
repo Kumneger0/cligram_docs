@@ -7,41 +7,62 @@ icon: users
 
 # Multi-Account Management
 
-cligram supports multiple Telegram accounts, allowing you to switch between them easily without logging out.
+Cligram supports multiple Telegram accounts with complete session isolation, allowing you to seamlessly hot-swap between accounts directly within the TUI or manage them via the CLI.
 
-### Adding a New Account
+---
 
-To add a new account, run:
+### In-App Account Switcher (Recommended)
 
+You can switch accounts instantly while using Cligram without exiting or restarting:
+
+1. Ensure the message input box is not actively focused (press **Tab** or **Esc** if needed).
+2. Press **`ctrl + a`** to open the **Account Switcher Modal**.
+3. Use the arrow keys (**↑ / ↓**) to select any account on your device and press **Enter** to hot-swap into that account immediately.
+
+---
+
+### Adding an Account In-App (Inline Auth Wizard)
+
+You can log into a new Telegram account directly from within Cligram:
+
+1. Open the Account Switcher Modal with **`ctrl + a`**.
+2. Select **`+ Add Account`** and press **Enter**.
+3. An inline authentication wizard will guide you through:
+   - Entering your international phone number (e.g. `+1234567890`).
+   - Entering the Telegram login verification code.
+   - Entering your Two-Factor Authentication (2FA) password if enabled.
+4. Once completed, the new account is saved and loaded immediately.
+
+---
+
+### CLI Account Management
+
+You can also manage accounts from your shell:
+
+#### Adding an Account via CLI
 ```bash
 cligram account --add
 ```
+Creates a new session directory (e.g., `account2`) and triggers the terminal authentication flow.
 
-This will:
-1. Create a new session directory (e.g., `account2`).
-2. Automatically trigger the login flow for the new account.
-3. Once logged in, this account will be saved for future use.
-
-### Switching Between Accounts
-
-You can switch between your existing accounts using the `account` command:
-
+#### Switching Accounts via CLI
 ```bash
 cligram account
 ```
+Opens an interactive terminal selector showing all accounts on your device.
 
-An interactive menu will appear showing all active accounts on your device. Use the arrow keys to navigate and press **Enter** to select the account you want to use.
-
-### Starting with a Specific Account
-
-If you want to start cligram with a specific account directly, use the `-a` or `--account` flag followed by the account's directory name:
-
+#### Launching with a Specific Account
+To launch Cligram directly with a specific account:
 ```bash
 cligram -a account2
+# or
+cligram --account account2
 ```
+
+---
 
 ### How It Works
 
-- **Storage**: Each account is stored in its own subdirectory within `~/.cligram/` (e.g., `~/.cligram/account1`, `~/.cligram/account2`).
-- **Default Account**: By default, cligram uses the first account it finds in your session directory. If no accounts exist, it defaults to `account1`.
-- **Isolation**: Each account has its own local database, session files, and configuration, ensuring complete isolation between them.
+- **Storage**: Each account lives in its own subdirectory inside `~/.cligram/` (e.g., `~/.cligram/account1/`, `~/.cligram/account2/`).
+- **Complete Isolation**: Each account maintains separate session credentials, message history, and download caches.
+- **Default Account**: Cligram defaults to the first configured account on your system (`account1`).

@@ -9,51 +9,140 @@ icon: terminal
 
 ### Quick Start
 
-- **Login:** Run `cligram` and follow the prompts if you are not logged in.
-- **Account Management:** Run `cligram account` to switch accounts or `cligram account --add` to add a new one.
-- **Logout:** Run `cligram logout`.
-- **Upgrade:** On Debian/Ubuntu/Alpine, run `cligram upgrade`.
+- **Launch:** Run `cligram` in your terminal. Follow the interactive prompts to log in if it is your first time.
+- **Account Switcher:** Press `ctrl + a` (when not typing in the input box) to open the in-app account switcher, or run `cligram account` via the CLI.
+- **Ghost Mode Settings:** Press `F2` or `,` to open the Ghost Mode settings modal and toggle privacy features live.
+- **Logout:** Run `cligram logout` to terminate the active session.
+- **Upgrade:** On Debian/Ubuntu/Alpine, run `cligram upgrade` to fetch the latest release.
+
+---
 
 ### Layout
 
-- **Sidebar:** Your chats list (Users, Groups, Channels).
-- **Chat Area:** Messages of the selected chat.
-- **Focus:** The active area has a green border. Use Tab to switch.
+- **Sidebar (Left):** Displays your dialogs split across 5 category tabs.
+- **Message Stream (Right):** Viewport-based conversation history rendering styled chat bubbles with sender attribution, reactions, and media badges.
+- **Message Input (Bottom):** Text input box for typing messages, staging attachments, and autocomplete. When in read-only channels or muted chats, it transforms into an informative status banner.
+- **Focus:** The active pane is highlighted with a green border. Press **Tab** or **Shift + Tab** to switch focus between the sidebar, message stream, and input box.
 
-### Indicators
+---
 
-- **●** Online Status: A yellow icon before a user's name indicates they are online.
-- **●** Unread Messages: A red icon followed by a number in brackets (e.g., (3)) indicates the number of unread messages in a chat.
+### Sidebar Tabs & Filtering
 
-### Navigation & Shortcuts
+Switch between dialog categories at any time:
 
-- **Focus**: Tab toggles focus between sidebar and chat.
-- **Move**: ↑ / k moves up; ↓ / j moves down.
-- **Latest Message**: Shift + ↓ gets the latest message (only in MainView).
-- **Filter (sidebar)**: c = Channels, g = Groups, u = Users.
-- **Search**: `ctrl + k` opens search. Type to search; results appear below. Tab switches between input and results. Enter opens selection; Esc closes.
-- **Forums**: Navigate to a group, hit Enter. If it has topics, they will list in the main view. Select one with Enter to open; exit a topic with Backspace.
+- **a**: **All** – Unified list of all dialogs.
+- **u**: **Users** – Direct 1-to-1 conversations.
+- **g**: **Groups** – Group chats and supergroups.
+- **c**: **Channels** – Broadcast channels.
+- **b**: **Bots** – Automated Telegram bots.
+
+---
+
+### Status Indicators & Badges
+
+- **● (Yellow):** Online status indicator next to a user's name.
+- **● (Red + Count):** Number of unread messages in a chat (e.g., `(3)`).
+- **(edited):** Appears next to messages that have been modified in real time.
+- **🔇 MUTED:** Appears in the top status bar when your microphone is muted during a call.
+- **Service Messages:** System notifications (such as members joining via invite links, leaves, or pinned messages) render as centered, italicized badges distinct from normal message bubbles.
+
+---
+
+### Desktop Notifications & Focus Suppression
+
+Cligram delivers native desktop OS notifications (`notify-send` on Linux, Notification Center on macOS) when new messages or calls arrive:
+
+- **Smart Focus Suppression:** If you are actively focused on a chat, notifications for that conversation are automatically suppressed to prevent desktop chime spam and popups while you are actively reading or typing.
+- **Notification Cascade:** Server-side mute settings, mute-until durations, silent messages, and account-level notification preferences are fully respected.
+
+---
+
+### Viewport Navigation
+
+When focused on the message stream:
+
+- **↑ / k:** Move up one message.
+- **↓ / j:** Move down one message.
+- **Page Up (pgup):** Scroll half-page up.
+- **Page Down (pgdown):** Scroll half-page down.
+- **Home:** Jump to the earliest loaded message.
+- **End:** Jump to the latest message.
+- **Shift + ↓:** Scroll to the bottom and fetch newest messages.
+- **i:** Jump directly to the message input box.
+
+---
 
 ### Working in Chats
 
-Select messages by moving with ↑/↓ (or k/j) in the chat area.
+Select a message in the stream using navigation keys, then press:
 
-- **d**: delete
-- **r**: reply
-- **e**: edit
-- **f**: forward
-- **u**: DM the sender (from a group)
+- **r:** Reply to the selected message.
+- **e:** Edit the selected message (if authored by you).
+- **d:** Delete the selected message (prompts confirmation modal).
+- **f:** Forward the selected message (opens dialog quick-picker).
+- **ctrl + r:** Open the **Emoji Reactions** modal to react to the message.
+- **u:** Open a direct message with the message author (when inside a group).
+- **m:** Open the interactive **Group Member Roster** modal (inside groups or channels).
+- **Enter:**
+  - On a **media message**: Downloads the asset to `~/.cache/cligram/media/` and launches it in your system's default media player.
+  - On a **Telegram link** (`t.me/+hash`, `t.me/c/...`, `@user`): Dispatches the in-app link router or join preview modal.
+  - On an **external URL**: Opens the link in your desktop browser.
+  - On a **forum group**: Opens the list of forum topics.
+- **c:** When focused on a broadcast channel post that has comments, opens the in-app **Discussion Comments** modal.
 
-### Compose & Attachments
+---
 
-- **ctrl + a**: Toggle the file picker when the input is focused.
-- After picking a file, optionally add a caption, then press Enter to send. You may need to press Tab to focus on the input box after selecting the file.
-- You will see a text indicating that the file is being uploaded.
+### Links & Channel Join Previews
 
-### Reading Behavior
+Cligram includes an in-app link router that resolves Telegram links directly without opening an external browser:
 
-- **Typing indicator**: If enabled, others see “typing…” while you compose.
-- **Read receipts** (`chat.readReceiptMode`):
-  - `default`: Mark read only when you interact (e.g., reply).
-  - `instant`: Mark read as soon as you view.
-  - `never`: Never mark read automatically.
+- **Opening Links:**
+  - Select any message containing a Telegram link (`t.me/+hash`, `t.me/c/...`, public `@handle`, or `https://t.me/...`) and press **`Enter`**.
+  - Or type `/open <link>`, `/join <link>`, or `@handle` directly into the message input and press **`Enter`**.
+- **Join Preview Modal:** Opening an invite link or unjoined channel displays an interactive modal showing:
+  - Channel or group title, description, and member or subscriber counts.
+  - Admin approval requirement notice (if required).
+  - Single-key actions: **`[Enter]`** to Join (or Request to Join), and **`[Esc]`** or **`q`** to dismiss.
+- **Unjoined Public Channels:** When viewing an unjoined public channel in your chat stream, the message input transforms into an **`[Enter] Join`** prompt (press **`Tab`** to focus).
+
+---
+
+### Voice Calling
+
+Cligram supports 1-to-1 voice calling:
+
+- **ctrl + p:** Initiate a voice call to the selected user (from Users or All list).
+- **a:** Accept an incoming call.
+- **d / Esc:** Decline an incoming call.
+- **Alt + M:** Toggle microphone mute / unmute during an active call.
+- **Alt + H:** Hang up or cancel a call.
+
+An in-call status bar remains pinned at the top of the interface displaying the contact name, call duration, connection type (`[P2P]` / `[Relay]`), and your mute status.
+
+---
+
+### Compose, Attachments & Bot Autocomplete
+
+When the message input is focused:
+
+- **Type message + Enter:** Send message.
+- **Per-Dialog Drafts:** Unsent message text typed in the input field is automatically preserved per dialog. When switching between chats or tabs, your draft is remembered and restored the moment you return. Sending the message clears the draft.
+- **ctrl + a:** Launch the native GUI file picker (`zenity` / `kdialog`) to attach a file.
+  - A staged file is shown as an **Attachment Preview Chip**: `📎 filename (size) • [Esc] Detach`.
+  - Press **Esc** to remove the attachment before sending.
+  - Press **Enter** to upload and send the file with an optional caption.
+- **Bot Commands (`/`):** Typing `/` in a bot chat or a group with bots opens the **Bot Command Autocomplete Overlay**:
+  - Filter commands dynamically as you type.
+  - Use **↑ / ↓** to select a command.
+  - Press **Tab** or **Enter** to autocomplete the command.
+  - Press **Esc** to dismiss the autocomplete popup.
+
+---
+
+### Global Overlays & Modals
+
+- **ctrl + k:** Open the **Search Palette** to search through all chats, channels, and messages.
+- **ctrl + a (outside input):** Open the **Account Switcher Modal** to swap accounts or run the inline auth wizard.
+- **F2 or , (outside input):** Open the **Ghost Mode Settings Modal** to toggle read receipts and typing status live.
+- **alt + s:** Open the **Stories Viewer Overlay** to view user stories anonymously.
+- **Esc:** Close any active modal dialog and return to the main view.
