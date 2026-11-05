@@ -13,10 +13,6 @@ icon: book
 
 - **Ghost Mode:** Read messages anonymously, view user stories invisibly, and control typing indicators without notifying peers.
 - **Voice Calling:** Make and receive 1-to-1 voice calls directly in your terminal.
-- **Multi-Account:** Switch between multiple accounts in real time using the in-app modal or manage them via the CLI.
-- **Rich Media & Attachments:** View photos, videos, audio, voice notes, and documents on demand using your native system viewer, and send files using a GUI file picker.
-- **Full Group & Forum Support:** Read and write in supergroups, participate in forum topics, and inspect group members via an interactive roster modal.
-- **Bot Interactions:** Dedicated Bots tab with interactive bot command autocomplete overlay.
 
 ### Limitations
 
