@@ -32,10 +32,3 @@ You can also download pre-built binaries and native packages directly from [GitH
 ### 3. Building from Source
 
 To compile Cligram directly from source code, refer to the [BUILD.md guide on GitHub](https://github.com/Kumneger0/cligram/blob/main/BUILD.md).
-
----
-
-### 4. Optional Desktop Utilities (Linux)
-
-- **File Picker (`ctrl + a` in input):** Cligram uses `zenity` (GNOME) or `kdialog` (KDE) to open a graphical file dialog when attaching files.
-- **Media & Link Opener:** Cligram uses `xdg-open` (`xdg-utils`) to open links and downloaded media in your default desktop applications.

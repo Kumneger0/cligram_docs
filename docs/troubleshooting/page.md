@@ -22,27 +22,13 @@ icon: code
 ### File Attachments & File Picker
 
 - **"No GUI file picker found":**
-  On Linux, attaching files (`ctrl + a` when the input is focused) requires a native desktop dialog. Install `zenity` (GNOME/GTK) or `kdialog` (KDE):
-  ```bash
-  # Debian / Ubuntu
-  sudo apt install zenity
-
-  # Arch Linux
-  sudo pacman -S zenity
-  ```
-- **Stuck attachment:**
-  If you stage an attachment and decide not to send it, press **Esc** while the attachment preview chip is visible.
+  On minimal Linux window managers, install `zenity` or `kdialog` to enable the graphical file picker dialog.
 
 ---
 
-### Media Viewing
+### Media Cache
 
-- **Media does not open on Enter:**
-  On Linux, Cligram delegates media opening to `xdg-open`. Ensure `xdg-utils` is installed:
-  ```bash
-  sudo apt install xdg-utils
-  ```
-  Downloaded media is cached under `~/.cache/cligram/media/`.
+Downloaded photos, videos, and media files are saved locally under `~/.cache/cligram/media/`.
 
 ---
 
@@ -56,4 +42,3 @@ icon: code
   Or inspect the log file directly at `/tmp/cligram.log`.
 - **Storage Directory:**
   All session data and configurations reside under `~/.cligram/`.
-
