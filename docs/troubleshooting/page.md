@@ -10,15 +10,10 @@ icon: code
 ### Voice Calling Issues
 
 - **Voice call fails or audio is silent:**
-  If a voice call fails to connect or has no sound:
-  1. Ensure you have an audio server backend installed:
-     - **PipeWire:** Install `pipewire-audio` or `pipewire-utils`.
-     - **PulseAudio:** Install `pulseaudio-utils`.
-     - **ALSA:** Install `alsa-utils`.
-  2. Run the loopback test in your terminal to verify microphone and speaker communication:
-     ```bash
-     cligram call-helper --loopback
-     ```
+  Run the loopback test in your terminal to verify microphone and speaker communication:
+  ```bash
+  cligram call-helper --loopback
+  ```
 - **"Cannot call peer due to privacy settings":**
   The remote user has configured Telegram to restrict incoming phone calls from non-contacts or everyone.
 
