@@ -55,6 +55,3 @@ All settings are persisted in `~/.cligram/user.config.json`.
 | `chat.readReceiptMode` | string | `"default"` | Controls read receipt delivery: `"default"`, `"instant"`, or `"never"`. |
 | `readStories` | boolean | `false` | When set to `false`, views stories anonymously without notifying the owner. |
 
-> [!NOTE]
-> **Desktop Notifications:** Cligram automatically dispatches native desktop notifications for incoming messages and calls while respecting Telegram mute preferences. Notifications are intelligently suppressed for the chat actively focused in your viewport.
-

@@ -45,16 +45,6 @@ Switch between dialog categories at any time:
 - **(edited):** Appears next to messages that have been modified in real time.
 - **🔇 MUTED:** Appears in the top status bar when your microphone is muted during a call.
 - **Service Messages:** System notifications (such as members joining via invite links, leaves, or pinned messages) render as centered, italicized badges distinct from normal message bubbles.
-
----
-
-### Desktop Notifications & Focus Suppression
-
-Cligram delivers native desktop OS notifications (`notify-send` on Linux, Notification Center on macOS) when new messages or calls arrive:
-
-- **Smart Focus Suppression:** If you are actively focused on a chat, notifications for that conversation are automatically suppressed to prevent desktop chime spam and popups while you are actively reading or typing.
-- **Notification Cascade:** Server-side mute settings, mute-until durations, silent messages, and account-level notification preferences are fully respected.
-
 ---
 
 ### Viewport Navigation
