@@ -19,7 +19,7 @@ Cligram supports making and receiving 1-to-1 voice calls directly in your termin
 
 ---
 
-### Call States & Audio Ringtones
+### Call States
 
 Outgoing and incoming calls transition through interactive states:
 
@@ -28,13 +28,11 @@ Outgoing and incoming calls transition through interactive states:
 - **Connecting:** Establishing the audio connection (`🔄 Connecting with <User>...`).
 - **Active:** The call is connected. The duration timer begins, and the status bar displays `[P2P]` (direct peer-to-peer) or `[Relay]` (routed through Telegram servers) connection status.
 
-**Audio Ringtones:** Cligram includes synthesized audio ringtones during incoming and outgoing call states. Ringtones automatically cut off the moment the call is answered, declined, or canceled.
-
 ---
 
 ### Incoming Calls
 
-When someone calls you, an incoming call popup appears over your terminal with an audible ringtone:
+When someone calls you, an incoming call popup appears over your terminal:
 
 - Press **`a`** to accept the call.
 - Press **`d`** or **`Esc`** to decline.
