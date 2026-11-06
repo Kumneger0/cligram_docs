@@ -13,7 +13,7 @@ icon: terminal
 - **Account Switcher:** Press `ctrl + a` (when not typing in the input box) to open the in-app account switcher, or run `cligram account` via the CLI.
 - **Ghost Mode Settings:** Press `F2` or `,` to open the Ghost Mode settings modal and toggle privacy features live.
 - **Logout:** Run `cligram logout` to terminate the active session.
-- **Upgrade:** On Debian/Ubuntu/Alpine, run `cligram upgrade` to fetch the latest release.
+- **Upgrade:** Run `cligram upgrade` to automatically update to the latest release.
 
 ---
 

@@ -2,7 +2,7 @@
 order: 6
 title: Voice Calling
 description: Make and receive 1-to-1 voice calls in your terminal.
-icon: terminal
+icon: phone
 ---
 
 # Voice Calling

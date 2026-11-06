@@ -2,7 +2,7 @@
 order: 9
 title: FAQ
 description: Frequently asked questions.
-icon: book
+icon: help-circle
 ---
 
 # FAQ

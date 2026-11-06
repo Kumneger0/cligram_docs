@@ -2,7 +2,7 @@
 order: 10
 title: Contributing
 description: How to contribute to cligram.
-icon: rocket
+icon: git-pull-request
 ---
 
 # Contributing

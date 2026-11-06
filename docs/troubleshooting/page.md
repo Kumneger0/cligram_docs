@@ -2,7 +2,7 @@
 order: 8
 title: Troubleshooting
 description: Common issues, voice call diagnostics, and debugging tools.
-icon: code
+icon: wrench
 ---
 
 # Troubleshooting
