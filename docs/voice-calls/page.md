@@ -41,12 +41,10 @@ When someone calls you, an incoming call popup appears over your terminal:
 
 ### In-Call Controls
 
-| Action | Shortcut | Context |
-| :--- | :--- | :--- |
-| **Toggle Mute** | `Alt + M` | During an active call |
-| **Hang Up** | `Alt + H` | During an active call or dialing |
+- **`Alt + M`:** Toggle microphone mute / unmute.
+- **`Alt + H`:** Hang up or cancel dialing.
 
-While a call is active, a status bar pinned at the top of your terminal displays the contact name, call duration, connection type (`[P2P]` or `[Relay]`), and your mute status (`🔇 MUTED`).
+While a call is active, the status bar pinned at the top of your terminal displays the contact name, elapsed duration, connection type (`[P2P]` or `[Relay]`), and mute status (`🔇 MUTED`).
 
 ---
 

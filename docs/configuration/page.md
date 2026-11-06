@@ -49,9 +49,7 @@ All settings are persisted in `~/.cligram/user.config.json`.
 
 #### Available Fields
 
-| Key | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `chat.sendTypingState` | boolean | `true` | When set to `false`, hides the "typing..." indicator from peers while you type. |
-| `chat.readReceiptMode` | string | `"default"` | Controls read receipt delivery: `"default"`, `"instant"`, or `"never"`. |
-| `readStories` | boolean | `false` | When set to `false`, views stories anonymously without notifying the owner. |
+- **`chat.sendTypingState`** *(boolean, default: `true`)*: When set to `false`, hides the "typing..." indicator from peers while you type.
+- **`chat.readReceiptMode`** *(string, default: `"default"`)*: Controls read receipt delivery (`"default"`, `"instant"`, or `"never"`).
+- **`readStories`** *(boolean, default: `false`)*: When set to `false`, views stories anonymously without notifying the owner.
 
