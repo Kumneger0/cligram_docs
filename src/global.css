@@ -160,3 +160,51 @@ body {
   background: rgba(182, 240, 156, 0.08) !important;
   border-color: var(--border) !important;
 }
+
+/* Sidebar search button & kbd shortcut badges */
+.fd-sidebar-search-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  border-radius: 8px !important;
+  border: 1px solid #1e2a1e !important;
+  background: #101510 !important;
+  color: #aab3a7 !important;
+  padding: 8px 12px !important;
+  transition: border-color 0.15s, background-color 0.15s !important;
+}
+
+.fd-sidebar-search-btn:hover {
+  border-color: #b6f09c !important;
+  background: #141a14 !important;
+}
+
+.fd-sidebar-search-kbd {
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  margin-left: auto !important;
+}
+
+.fd-sidebar-search-btn kbd,
+.dark .fd-sidebar .fd-sidebar-search-btn kbd {
+  background: #080a08 !important;
+  border: 1px solid #1e2a1e !important;
+  color: #aab3a7 !important;
+  font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 2px 5px !important;
+  border-radius: 4px !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 16px !important;
+}
+
+.fd-sidebar-search-btn:hover kbd,
+.dark .fd-sidebar .fd-sidebar-search-btn:hover kbd {
+  border-color: rgba(182, 240, 156, 0.4) !important;
+  color: #b6f09c !important;
+}

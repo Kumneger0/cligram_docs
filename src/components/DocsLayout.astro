@@ -195,7 +195,9 @@ const showSearch = !staticExport;
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <span>Search</span>
-          <kbd>⌘</kbd><kbd>K</kbd>
+          <div class="fd-sidebar-search-kbd">
+            <kbd id="fd-search-mod">Ctrl</kbd><kbd>K</kbd>
+          </div>
         </button>
       </div>
     )}
@@ -394,6 +396,13 @@ const showSearch = !staticExport;
     if (typeof (window as any).__fdOmniSearchSetOpen === 'function') (window as any).__fdOmniSearchSetOpen(true);
     else setSearchOpen(true);
   });
+
+  // Detect Mac vs Windows/Linux modifier key
+  const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator?.userAgent || '');
+  const modEl = document.getElementById('fd-search-mod');
+  if (modEl && isMac) {
+    modEl.textContent = '⌘';
+  }
 
   // Close sidebar on link click (mobile)
   sidebar?.querySelectorAll('a').forEach(link => {

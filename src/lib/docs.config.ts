@@ -11,7 +11,7 @@ export default defineDocs({
       colors: {
         primary: "#b6f09c",
         background: "#080a08",
-        muted: "#aab3a7",
+        muted: "#101510",
         border: "#1e2a1e",
       },
       components: { Callout: { variant: "outline" } },
