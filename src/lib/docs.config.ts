@@ -35,9 +35,9 @@ export default defineDocs({
     },
   }),
   github: {
-    url: "https://github.com/Kumneger0/cligram",
+    url: "https://github.com/kumneger0/cligram_docs",
     branch: "main",
-    directory: "cligram_docs/cligram_docs/docs",
+    directory: "docs",
   },
   ordering: "numeric",
   nav: {
@@ -45,24 +45,6 @@ export default defineDocs({
     url: "/docs",
   },
   sidebar: { flat: false, collapsible: true },
-  pageActions: {
-    alignment: "right",
-    copyMarkdown: { enabled: true },
-    openDocs: {
-      enabled: true,
-      providers: [
-        {
-          name: "ChatGPT",
-          urlTemplate:
-            "https://chatgpt.com/?hints=search&q=Read+{mdxUrl},+I+want+to+ask+questions+about+it.",
-        },
-        {
-          name: "Claude",
-          urlTemplate: "https://claude.ai/new?q=Read+{mdxUrl},+I+want+to+ask+questions+about+it.",
-        },
-      ],
-    },
-  },
   llmsTxt: { enabled: false, baseUrl: "https://docs.farming-labs.dev" },
   lastUpdated: { enabled: true, position: "below-title" },
   themeToggle: { enabled: true, default: "dark" },
