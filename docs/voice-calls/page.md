@@ -14,7 +14,7 @@ Cligram supports making and receiving 1-to-1 voice calls directly in your termin
 ### How to Call
 
 1. Navigate to a user in your **Users** or **All** list.
-2. Press **`ctrl + p`** to initiate a voice call.
+2. Press **`ctrl + p`** (or press **`x`** and select **`[p] Voice call`**) to initiate a voice call.
 3. Press **`Alt + H`** at any time to cancel dialing.
 
 ---

@@ -66,6 +66,7 @@ When focused on the message stream:
 
 Select a message in the stream using navigation keys, then press:
 
+- **x:** Open the **Context-Aware Action Menu** listing all available actions for the selected message.
 - **r:** Reply to the selected message.
 - **e:** Edit the selected message (if authored by you).
 - **d:** Delete the selected message (prompts confirmation modal).
@@ -79,6 +80,17 @@ Select a message in the stream using navigation keys, then press:
   - On an **external URL**: Opens the link in your desktop browser.
   - On a **forum group**: Opens the list of forum topics.
 - **c:** When focused on a broadcast channel post that has comments, opens the in-app **Discussion Comments** modal.
+
+---
+
+### Context-Aware Action Menu (`x`)
+
+Press **`x`** at any time while browsing messages or the sidebar to open a context menu listing all available operations for the selected item:
+
+- **In Message View:** Press `x` to quickly **[r]**eply, **[e]**dit, **[d]**elete, **[f]**orward, **[R]**eact with emoji, cop**[y]** text, **[o]**pen links/media, or view **[c]**omments.
+- **In Sidebar:** Press `x` to **[Enter]** open chat, start a voice **[p]**hone call, or view group **[m]**embers.
+- **Quick Execution:** Either press the bracketed shortcut key directly or navigate with `j` / `k` / arrow keys and press `Enter`.
+- **Dismiss:** Press `Esc`, `q`, or `x` to close the menu.
 
 ---
 
@@ -131,6 +143,7 @@ When the message input is focused:
 
 ### Global Overlays & Modals
 
+- **x:** Open the **Context-Aware Action Menu** for the active message or sidebar chat.
 - **ctrl + k:** Open the **Search Palette** to search through all chats, channels, and messages.
 - **ctrl + a (outside input):** Open the **Account Switcher Modal** to swap accounts or run the inline auth wizard.
 - **F2 or , (outside input):** Open the **Ghost Mode Settings Modal** to toggle read receipts and typing status live.
