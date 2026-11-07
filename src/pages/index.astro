@@ -104,7 +104,7 @@ const description =
                 <div class="w-3 h-3 rounded-full bg-terminal-border"></div>
                 <div class="w-3 h-3 rounded-full bg-terminal-border"></div>
               </div>
-              <span class="text-xs text-terminal-muted ml-2 font-mono">cligram — ghost mode</span>
+              <span class="text-xs text-terminal-muted ml-2 font-mono">cligram ↔ telegram desktop</span>
             </div>
             <div class="flex items-center gap-2 font-mono text-[11px] text-terminal-accent">
               <span class="w-2 h-2 rounded-full bg-terminal-accent animate-pulse"></span>
@@ -112,7 +112,19 @@ const description =
             </div>
           </div>
           <div class="p-1 bg-terminal-bg">
-            <img src="/demo.gif" alt="Cligram terminal demo" class="w-full rounded-b border border-terminal-border/30" />
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              poster="/demo.gif"
+              class="w-full rounded-b border border-terminal-border/30"
+            >
+              <source src="/demo.mp4" type="video/mp4" />
+              <source src="/demo.webm" type="video/webm" />
+              <img src="/demo.gif" alt="Cligram terminal demo" class="w-full rounded-b border border-terminal-border/30" />
+            </video>
           </div>
         </div>
       </div>
