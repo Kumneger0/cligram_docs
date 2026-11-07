@@ -87,7 +87,7 @@ Select a message in the stream using navigation keys, then press:
 
 Press **`x`** at any time while browsing messages or the sidebar to open a context menu listing all available operations for the selected item:
 
-- **In Message View:** Press `x` to quickly **[r]**eply, **[e]**dit, **[d]**elete, **[f]**orward, **[R]**eact with emoji, cop**[y]** text, **[o]**pen links/media, or view **[c]**omments.
+- **In Message View:** Press `x` to quickly **[r]**eply, **[e]**dit, **[d]**elete, **[f]**orward, **[ctrl+r]** react with emoji, cop**[y]** text, **[o]**pen links/media, or view **[c]**omments.
 - **In Sidebar:** Press `x` to **[Enter]** open chat, start a voice **[p]**hone call, or view group **[m]**embers.
 - **Quick Execution:** Either press the bracketed shortcut key directly or navigate with `j` / `k` / arrow keys and press `Enter`.
 - **Dismiss:** Press `Esc`, `q`, or `x` to close the menu.
