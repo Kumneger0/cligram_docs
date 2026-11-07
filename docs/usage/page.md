@@ -98,9 +98,7 @@ Press **`x`** at any time while browsing messages or the sidebar to open a conte
 
 Cligram includes an in-app link router that resolves Telegram links directly without opening an external browser:
 
-- **Opening Links:**
-  - Select any message containing a Telegram link (`t.me/+hash`, `t.me/c/...`, public `@handle`, or `https://t.me/...`) and press **`Enter`**.
-  - Or type `/open <link>`, `/join <link>`, or `@handle` directly into the message input and press **`Enter`**.
+- **Opening Links:** Select any message containing a Telegram link (`t.me/+hash`, `t.me/c/...`, public `@handle`, or `https://t.me/...`) and press **`Enter`**.
 - **Join Preview Modal:** Opening an invite link or unjoined channel displays an interactive modal showing:
   - Channel or group title, description, and member or subscriber counts.
   - Admin approval requirement notice (if required).
